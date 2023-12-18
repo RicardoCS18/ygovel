@@ -35,7 +35,7 @@ function Login() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className=" bg-black space-y-14 h-[25rem] ">
+      <form onSubmit={form.handleSubmit(onSubmit)} className=" bg-white space-y-14 h-[25rem] ">
         <FormField
           control={form.control}
           name="userName"
