@@ -1,19 +1,29 @@
+import { motion } from "framer-motion"
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Login from "./login-form"
 import Register from "./register-form"
 
 const UserTab = () => {
   return (
-    <div className="bg-black flex justify-center w-[300px] h-[26.5rem] rounded-lg box-content	 pt-1 pb-1	">
-      <Tabs defaultValue="account" className="w-[200px]">
+    <motion.div
+      initial={{ opacity: 0.5, scale: 0.75 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.2 }}
+      className="bg-white flex justify-center w-[300px] h-[26.5rem] rounded-lg box-content	 pt-1 pb-1	">
+      <Tabs defaultValue="login" className="w-[200px]">
         <TabsList>
-          <TabsTrigger value="account">Login</TabsTrigger>
-          <TabsTrigger value="password">Register</TabsTrigger>
+          <TabsTrigger value="login">Login</TabsTrigger>
+          <TabsTrigger value="register">Register</TabsTrigger>
         </TabsList>
-        <TabsContent value="account"><Login /></TabsContent>
-        <TabsContent value="password"><Register /></TabsContent>
+        <TabsContent value="login"><motion.div initial={{ opacity: 0.2, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}><Login /></motion.div></TabsContent>
+        <TabsContent value="register"><motion.div initial={{ opacity: 0.2, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}><Register /></motion.div></TabsContent>
       </Tabs>
-    </div>
+    </motion.div>
   )
 }
 

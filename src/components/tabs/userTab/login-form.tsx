@@ -62,6 +62,7 @@ function Login() {
             </FormItem>
           )}
         />
+        <div>Forgot your <a href="">password</a>?</div>
 
         <Button type="submit">Submit</Button>
       </form>

@@ -4,7 +4,7 @@ import UserTab from './components/tabs/userTab/userTab'
 function App() {
   return (
     <>
-      <div className='flex justify-center rounded-10 mt-10'>
+      <div className='flex justify-center mt-10'>
         <UserTab />
       </div>
 
