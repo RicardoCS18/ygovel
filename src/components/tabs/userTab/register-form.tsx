@@ -39,7 +39,7 @@ function Register() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="bg-black space-y-3 h-[25rem] ">
         <FormField
           control={form.control}
           name="userName"
